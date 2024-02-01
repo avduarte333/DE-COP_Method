@@ -2,12 +2,19 @@
 This is the anonymized version of the code and data for the paper 'DE-COP: Detecting Copyrighted Content in Language Models Training Data' to be submitted to ICML 2024.<br>
 
 
-DE-COP is a method for Detecting Copyrighted Content in the Language Models Training Data. 
+DE-COP is a method for Detecting Copyrighted Content in the Language Models Training Data. It employs probing tasks structured as multiple-choice questions, whose options include both verbatim text and their paraphrases.
 ![DE-COP](https://github.com/avduarte333/DE-COP/assets/79573601/78b2f167-988a-48cf-aef7-805682508873)
 
 
+---
+## DE-COP Example in _Lord of The Rings_ (Possible Member Data) and _A Day of Fallen Night_ (Non Member Data)
+
+
+
+
+
 ### 📄 arXivTection and BookTection Datasets
-The arXivTection and the BookTection datasets serve as a benchmarks designed for the task of detecting pretraining data from Large Language models.
+The arXivTection and the BookTection datasets serve as benchmarks designed for the task of detecting pretraining data from Large Language models.
 
 The arXivTection consists of 50 research papers extracted from arXiv. 
 - 25 published in 2023: Non-Training data, "_label_" column = 0.
