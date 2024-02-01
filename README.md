@@ -3,7 +3,7 @@ This is the anonymized version of the code and data for the paper 'DE-COP: Detec
 
 
 DE-COP is a method for Detecting Copyrighted Content in the Language Models Training Data. It employs probing tasks structured as multiple-choice questions, whose options include both verbatim text and their paraphrases.
-![DE-COP](https://github.com/avduarte333/DE-COP/assets/79573601/78b2f167-988a-48cf-aef7-805682508873)
+![GitHub Logo](DE-COP.png)
 
 
 ---
