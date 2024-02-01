@@ -1,8 +1,9 @@
 # DE-COP
-This is the anonymized version of the code and data for the paper 'DE-COP: Detecting Copyrighted Content in Language Models Training Data' to be submitted to ICML 2024
+This is the anonymized version of the code and data for the paper 'DE-COP: Detecting Copyrighted Content in Language Models Training Data' to be submitted to ICML 2024.<br>
+Below we introduce the proposed benchmarks and the code to evaluate models on them.
 
 
-# 📄 arXivTection and BookTection Datasets
+### 📄 arXivTection and BookTection Datasets
 The arXivTection and the BookTection datasets serve as a benchmarks designed for the task of detecting pretraining data from Large Language models.
 
 The arXivTection consists of 50 research papers extracted from arXiv. 
@@ -22,13 +23,13 @@ Passages on BookTection come in 3 different sizes (small, medium and large) whic
 <br>
 <br>
 
-# 🧪 Testing Models on the Benchmarks
+### 🧪 Testing Models on the Benchmarks
 Our datasets are planned to be used on a Multiple-Choice-Question-Answering format. Nonetheless, it is compatible to be used with other pretraining data detection methods.<br>
 
 <br>
 <br>
 
-# 🤝 Compatibility
+### 🤝 Compatibility
 The Multiple-Choice-Question-Answering task with our Dataset is designed to be applied to various models, such as:<br>
 - LLaMA-2
 - Mistral
@@ -40,7 +41,7 @@ The Multiple-Choice-Question-Answering task with our Dataset is designed to be a
 <br>
 <br>
 
-# 🔧 Loading the Dataset
+### 🔧 Loading the Dataset
 ```python
 from datasets import load_dataset
 
