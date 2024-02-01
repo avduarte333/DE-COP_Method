@@ -50,15 +50,9 @@ From each paper / book ≈ 30 passages are extracted. Each passage is paraphrase
 The "_Answer_" column indicates which of the passages is the real excerpt.<br>
 Passages on arXivTection are extracted to be on average ≈ 128 tokens in length.<br>
 Passages on BookTection come in 3 different sizes (small, medium and large) which aim to be respectively ≈(64, 128 and 256) tokens in length.
-
-<br>
-<br>
-
+---
 ### 🧪 Testing Models on the Benchmarks
 Our datasets are planned to be used on a Multiple-Choice-Question-Answering format. Nonetheless, it is compatible to be used with other pretraining data detection methods.<br>
-
-<br>
-<br>
 
 ### 🤝 Compatibility
 The Multiple-Choice-Question-Answering task with our Dataset is designed to be applied to various models, such as:<br>
