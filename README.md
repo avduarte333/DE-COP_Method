@@ -33,6 +33,7 @@ python 2_eval_HF.py <file_with_document_names.txt> <hf_model_name>
 python 2_eval_HF.py 0_book_list.txt LLaMA-2-70B
 ```
 
+---
 
 ### 📚 arXivTection and BookTection Datasets
 The arXivTection and the BookTection datasets serve as benchmarks designed for the task of detecting pretraining data from Large Language models.
