@@ -25,7 +25,7 @@ python 2_eval_BlackBox.py <file_with_document_names.txt> <black_box_model_name>
 python 2_eval_BlackBox.py 0_book_list.txt ChatGPT
 ```
 
-- If Model is ChatGPT or Claude
+- If Model is from Hugging Face
 ```
 python 2_eval_HF.py <file_with_document_names.txt> <hf_model_name>
 
