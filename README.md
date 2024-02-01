@@ -7,8 +7,11 @@ DE-COP is a method for Detecting Copyrighted Content in the Language Models Trai
 
 
 ---
-## DE-COP Example in _Lord of The Rings_ (Possible Member Data) and _A Day of Fallen Night_ (Non Member Data)
-
+## DE-COP Example
+```
+cd test_example
+python 1_oversample_labels.py 0_book_list
+```
 
 
 
