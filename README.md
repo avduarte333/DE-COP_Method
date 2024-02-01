@@ -1,6 +1,9 @@
 # DE-COP
 This is the anonymized version of the code and data for the paper 'DE-COP: Detecting Copyrighted Content in Language Models Training Data' to be submitted to ICML 2024.<br>
-Below we introduce the proposed benchmarks and the code to evaluate models on them.
+
+
+DE-COP is a method for Detecting Copyrighted Content in the Language Models Training Data. 
+![DE-COP](https://github.com/avduarte333/DE-COP/assets/79573601/78b2f167-988a-48cf-aef7-805682508873)
 
 
 ### 📄 arXivTection and BookTection Datasets
