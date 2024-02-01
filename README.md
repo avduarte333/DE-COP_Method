@@ -8,12 +8,30 @@ DE-COP is a method for Detecting Copyrighted Content in the Language Models Trai
 
 ---
 ## DE-COP Example
+⚠ Important: When using API-based models, such as Claude or ChatGPT, ensure to add the API key in 2_eval_BlackBox.py<br>
+
+First, go to the test_data directory and oversample each document according to all the possible 4-Option Permutations.<br>
+A new .xlsx file for each document will be created according to the following name <base_excel_name>_Paraphrases_Oversampling.xlsx
 ```
 cd test_example
-python 1_oversample_labels.py 0_book_list
+python 1_oversample_labels.py <file_with_document_names.txt>
+```
+Subsequently, in order to perform evaluation:
+- If Model is ChatGPT or Claude
+```
+python 2_eval_BlackBox.py <file_with_document_names.txt> <model_name>
+
+#In our example it would be:
+python 2_eval_BlackBox.py 0_book_list.txt ChatGPT
 ```
 
+- If Model is ChatGPT or Claude
+```
+python 2_eval_HF.py <file_with_document_names.txt> <model_name>
 
+#In our example it would be:
+python 2_eval_HF.py 0_book_list.txt LLaMA-2-70B
+```
 
 
 ### 📄 arXivTection and BookTection Datasets
