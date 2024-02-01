@@ -8,33 +8,33 @@ DE-COP is a method for Detecting Copyrighted Content in the Language Models Trai
 
 ---
 ## DE-COP Example
-⚠ Important: When using API-based models, such as Claude or ChatGPT, ensure to add the API key in 2_eval_BlackBox.py<br>
+⚠ Important: When using API-based models, ensure to add the API key in 2_eval_BlackBox.py<br>
 
-First, go to the test_data directory and oversample each document according to all the possible 4-Option Permutations.<br>
-A new .xlsx file for each document will be created according to the following name <base_excel_name>_Paraphrases_Oversampling.xlsx
+First, oversample each document according to all the possible 4-Option Permutations.<br>
+A new .xlsx file with the results will be created for each document. 
 ```
 cd test_example
 python 1_oversample_labels.py <file_with_document_names.txt>
 ```
-Subsequently, in order to perform evaluation:
+DE-COP Evaluation:
 - If Model is ChatGPT or Claude
 ```
-python 2_eval_BlackBox.py <file_with_document_names.txt> <model_name>
+python 2_eval_BlackBox.py <file_with_document_names.txt> <black_box_model_name>
 
-#In our example it would be:
+#In example:
 python 2_eval_BlackBox.py 0_book_list.txt ChatGPT
 ```
 
 - If Model is ChatGPT or Claude
 ```
-python 2_eval_HF.py <file_with_document_names.txt> <model_name>
+python 2_eval_HF.py <file_with_document_names.txt> <hf_model_name>
 
-#In our example it would be:
+#In example:
 python 2_eval_HF.py 0_book_list.txt LLaMA-2-70B
 ```
 
 
-### 📄 arXivTection and BookTection Datasets
+### 📚 arXivTection and BookTection Datasets
 The arXivTection and the BookTection datasets serve as benchmarks designed for the task of detecting pretraining data from Large Language models.
 
 The arXivTection consists of 50 research papers extracted from arXiv. 
@@ -68,13 +68,3 @@ The Multiple-Choice-Question-Answering task with our Dataset is designed to be a
 - Chat-GPT (gpt-3.5-turbo-instruct)
 - GPT-3 (text-davinci-003)
 - Claude 
-
-<br>
-<br>
-
-### 🔧 Loading the Dataset
-```python
-from datasets import load_dataset
-
-dataset = load_dataset("avduarte333/arXivTection")
-```
