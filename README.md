@@ -28,7 +28,7 @@ python 2_decop_blackbox.py --data arXivTection --target_model Claude
 python 2_decop_hf.py --data <data_file> --target_model <model_name> [--length <passage_size>]
 
 #Run Example:
-python 2_decop_hf.py --data BookTection --target_model LLaMA-2-70B --length small
+python 2_decop_hf.py --data BookTection --target_model LLaMA-2-70B --length medium
 ```
 
 Secondly, obtain DE-COP AUC Values.<br>
