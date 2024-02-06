@@ -9,6 +9,7 @@ DE-COP is a method for Detecting Copyrighted Content in the Language Models Trai
 ---
 ## DE-COP Example
 ⚠ Important: Ensure to add the API key in 2_decop_blackbox.py and HF LLaMA-2 access token in 2_decop_hf.py<br>
+
 ---
 First, obtain Multiple-Choice-Question-Answering results with DE-COP.<br>
 - If Model is API-based (ChatGPT or Claude)
