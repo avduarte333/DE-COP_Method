@@ -12,7 +12,7 @@ DE-COP is a method for Detecting Copyrighted Content in the Language Models Trai
 
 ---
 First, obtain Multiple-Choice-Question-Answering results with DE-COP.<br>
-- If Model is API-based (ChatGPT or Claude)
+- Model is ChatGPT or Claude
 ```
 python 2_decop_blackbox.py --data <data_file> --target_model <model_name> [--length <passage_size>]
 
@@ -23,7 +23,7 @@ python 2_decop_blackbox.py --data BookTection --target_model ChatGPT --length me
 python 2_decop_blackbox.py --data arXivTection --target_model Claude
 ```
 
-- If Model is from HuggingFace
+- Model is from LLaMA-2 family (7, 13, 70B)
 ```
 python 2_decop_hf.py --data <data_file> --target_model <model_name> [--length <passage_size>]
 
