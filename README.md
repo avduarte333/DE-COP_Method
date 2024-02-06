@@ -46,7 +46,7 @@ python 3_get_results_blackbox.py --data arXivTection
 
 
 
-### 📚 [arXivTection](www.google.com) and BookTection Datasets
+### 📚 [arXivTection](https://huggingface.co/datasets/avduarte333/arXivTection) and [BookTection](https://huggingface.co/datasets/avduarte333/BookTection) Datasets
 The arXivTection and the BookTection datasets serve as benchmarks designed for the task of detecting pretraining data from Large Language models.
 
 The arXivTection consists of 50 research papers extracted from arXiv. 
