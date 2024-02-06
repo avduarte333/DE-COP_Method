@@ -15,10 +15,10 @@ First, obtain Multiple-Choice-Question-Answering results with DE-COP.<br>
 ```
 python 2_decop_blackbox.py --data <data_file> --target_model <model_name> [--length <passage_size>]
 
-#Example 1 - BookTection
+#Run Example 1 - BookTection
 python 2_decop_blackbox.py --data BookTection --target_model ChatGPT --length medium
 
-#Example 2 - arXivTection
+#Run Example 2 - arXivTection
 python 2_decop_blackbox.py --data arXivTection --target_model Claude
 ```
 
@@ -26,7 +26,7 @@ python 2_decop_blackbox.py --data arXivTection --target_model Claude
 ```
 python 2_decop_hf.py --data <data_file> --target_model <model_name> [--length <passage_size>]
 
-#In example:
+#Run Example:
 python 2_decop_hf.py --data BookTection --target_model LLaMA-2-70B --length small
 ```
 
@@ -34,10 +34,10 @@ Secondly, obtain DE-COP AUC Values.<br>
 ```
 python 3_get_results_blackbox.py --data <data_file> [--length <passage_size>]
 
-#Example 1 - BookTection
+#Run Example 1 - BookTection
 python 3_get_results_blackbox.py --data BookTection --length medium
 
-#Example 2 - arXivTection
+#Run Example 2 - arXivTection
 python 3_get_results_blackbox.py --data arXivTection
 ```
 
