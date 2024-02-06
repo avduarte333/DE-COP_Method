@@ -1,5 +1,7 @@
 # DE-COP 👮
-This is the anonymized version of the code and data for the paper 'DE-COP: Detecting Copyrighted Content in Language Models Training Data' to be submitted to ICML 2024.<br>
+This repository provides the original implementation of DE-COP: Detecting Copyrighted Content in Language Models Training Data by André V. Duarte, Xuandong Zhao, Arlindo L. Oliveira and Lei Li <br>
+
+[I'm an inline-style link](https://www.google.com)
 
 
 DE-COP is a method for Detecting Copyrighted Content in the Language Models Training Data. It employs probing tasks structured as multiple-choice questions, whose options include both verbatim text and their paraphrases.
