@@ -23,7 +23,7 @@ python 2_decop_blackbox.py --data BookTection --target_model ChatGPT --length me
 python 2_decop_blackbox.py --data arXivTection --target_model Claude
 ```
 
-- Model is from LLaMA-2 family (7, 13, 70B)
+- Model is from LLaMA-2 family (7B, 13B, 70B)
 ```
 python 2_decop_hf.py --data <data_file> --target_model <model_name> [--length <passage_size>]
 
