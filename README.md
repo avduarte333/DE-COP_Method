@@ -8,32 +8,40 @@ DE-COP is a method for Detecting Copyrighted Content in the Language Models Trai
 
 ---
 ## DE-COP Example
-⚠ Important: When using API-based models, ensure to add the API key in 2_eval_BlackBox.py<br>
+⚠ Important: Ensure to add the API key in 2_decop_blackbox.py<br>
 
-First, oversample each document according to all the possible 4-Option Permutations.<br>
-A new .xlsx file with the results will be created for each document. 
+First, obtain Multiple-Choice-Question-Answering results with DE-COP.<br>
+- If Model is API-based (ChatGPT or Claude)
 ```
-cd test_example
-python 1_oversample_labels.py <file_with_document_names.txt>
-```
-DE-COP Evaluation:
-- If Model is ChatGPT or Claude
-```
-python 2_eval_BlackBox.py <file_with_document_names.txt> <black_box_model_name>
+python 2_decop_blackbox.py --data <data_file> --target_model <model_name> [--length <passage_size>]
 
-#In example:
-python 2_eval_BlackBox.py 0_book_list.txt ChatGPT
+#Example 1 - BookTection
+python 2_decop_blackbox.py --data BookTection --target_model ChatGPT --length medium
+
+#Example 2 - arXivTection
+python 2_decop_blackbox.py --data arXivTection --target_model Claude
 ```
 
-- If Model is from Hugging Face
+- If Model is from HuggingFace
 ```
-python 2_eval_HF.py <file_with_document_names.txt> <hf_model_name>
+python 2_decop_hf.py --data <data_file> --target_model <model_name> [--length <passage_size>]
 
 #In example:
-python 2_eval_HF.py 0_book_list.txt LLaMA-2-70B
+python 2_decop_hf.py --data BookTection --target_model LLaMA-2-70B --length small
 ```
 
----
+Secondly, obtain DE-COP AUC Values.<br>
+```
+python 3_get_results_blackbox.py --data <data_file> [--length <passage_size>]
+
+#Example 1 - BookTection
+python 3_get_results_blackbox.py --data BookTection --length medium
+
+#Example 2 - arXivTection
+python 3_get_results_blackbox.py --data arXivTection
+```
+
+
 
 ### 📚 arXivTection and BookTection Datasets
 The arXivTection and the BookTection datasets serve as benchmarks designed for the task of detecting pretraining data from Large Language models.
@@ -52,15 +60,20 @@ The "_Answer_" column indicates which of the passages is the real excerpt.<br>
 Passages on arXivTection are extracted to be on average ≈ 128 tokens in length.<br>
 Passages on BookTection come in 3 different sizes (small, medium and large) which aim to be respectively ≈(64, 128 and 256) tokens in length.
 
----
+<br>
+<br>
+
 ### 🧪 Testing Models on the Benchmarks
-Our datasets are planned to be used on a Multiple-Choice-Question-Answering format. Nonetheless, it is compatible to be used with other pretraining data detection methods.<br>
+Our datasets are planned to be used on a Multiple-Choice-Question-Answering format. Nonetheless, other pretraining data detection methods can be used.<br>
+
+<br>
+<br>
 
 ### 🤝 Compatibility
 The Multiple-Choice-Question-Answering task with our Dataset is designed to be applied to various models, such as:<br>
 - LLaMA-2
 - Mistral
 - Mixtral
-- Chat-GPT (gpt-3.5-turbo-instruct)
+- ChatGPT (gpt-3.5-turbo-instruct)
 - GPT-3 (text-davinci-003)
 - Claude 
