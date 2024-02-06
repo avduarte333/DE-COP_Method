@@ -1,7 +1,7 @@
 # DE-COP 👮
 This is the official repository for the paper [DE-COP: Detecting Copyrighted Content in Language Models Training Data](https://www.google.com) by *André V. Duarte, Xuandong Zhao, Arlindo L. Oliveira and Lei Li* <br>
 
-[Paper](https://www.google.com) , [BookTection Benchmark](https://huggingface.co/datasets/avduarte333/BookTection) , [arXivTection Benchmark](https://huggingface.co/datasets/avduarte333/arXivTection) , 
+[Paper](https://www.google.com) || [BookTection Benchmark](https://huggingface.co/datasets/avduarte333/BookTection) || [arXivTection Benchmark](https://huggingface.co/datasets/avduarte333/arXivTection) 
 
 
 DE-COP is a method for Detecting Copyrighted Content in the Language Models Training Data. It employs probing tasks structured as multiple-choice questions, whose options include both verbatim text and their paraphrases.
