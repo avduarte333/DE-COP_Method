@@ -9,7 +9,7 @@ DE-COP is a method for Detecting Copyrighted Content in the Language Models Trai
 
 
 ---
-## DE-COP Example
+## DE-COP (Reproduce our results)
 ⚠ Important: Ensure to add the API key in 2_decop_blackbox.py and HF LLaMA-2 access token in 2_decop_hf.py<br>
 
 ---
@@ -81,6 +81,8 @@ The Multiple-Choice-Question-Answering task with our Dataset is designed to be a
 - GPT-3 (text-davinci-003)
 - Claude
 
+### BookTection-128 Results
+The BookTection-128_Results directory contains the evaluation outcomes for all models tested with DE-COP and the Baselines on the BookTection Benchmark, specifically focusing on medium-length passages. These files offer a comprehensive overview of the results without the necessity for reproducing our experiments.
 
 ## 💬 Citation
 
