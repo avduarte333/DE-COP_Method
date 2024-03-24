@@ -8,7 +8,6 @@ from torch import nn
 import torch
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from datasets import load_dataset
 import textwrap
 
 
@@ -100,12 +99,15 @@ def process_files(data_type, passage_size, model, model_args_name):
     
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    if (data_type == "BookTection"):
-        document = load_dataset("avduarte333/BookTection")
-    else:
-        document = load_dataset("avduarte333/arXivTection")
+    data_dir = os.path.join(script_dir, 'data')
+    document_path = os.path.join(data_dir, data_type) + '.csv'
 
-    document = pd.DataFrame(document["train"])
+    try:
+        document = pd.read_csv(document_path)
+    except FileNotFoundError:
+        print(".csv File not found. Please check the file path.")
+        return
+
     unique_ids = document['ID'].unique().tolist()
     if data_type == "BookTection":
         document = document[document['Length'] == passage_size]

@@ -9,8 +9,6 @@ import torch
 
 from openai import OpenAI
 from anthropic import Anthropic, HUMAN_PROMPT, AI_PROMPT
-from datasets import load_dataset
-
 
 
 
@@ -60,16 +58,20 @@ def process_files(data_type, passage_size, model):
     
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    if (data_type == "BookTection"):
-        document = load_dataset("avduarte333/BookTection")
-    else:
-        document = load_dataset("avduarte333/arXivTection")
+    data_dir = os.path.join(script_dir, 'data')
+    document_path = os.path.join(data_dir, data_type) + '.csv'
 
-    document = pd.DataFrame(document["train"])
+    try:
+        document = pd.read_csv(document_path)
+    except FileNotFoundError:
+        print(".csv File not found. Please check the file path.")
+        return
+
     unique_ids = document['ID'].unique().tolist()
     if data_type == "BookTection":
         document = document[document['Length'] == passage_size]
         document = document.reset_index(drop=True)
+
         
 
 
@@ -107,6 +109,7 @@ def process_files(data_type, passage_size, model):
         else:
             author_name = ""
 
+
         if model == "ChatGPT":
             for j in tqdm(range(len(document_aux))):
                 probabilities = Query_LLM(data_type = data_type, model_name=model, query_data=document_aux.iloc[j], document_name=document_name, author_name=author_name)
@@ -129,8 +132,6 @@ def process_files(data_type, passage_size, model):
             for j in tqdm(range(len(document_aux))):
                 Max_Label.append(Query_LLM(data_type = data_type, model_name=model, query_data=document_aux.iloc[j], document_name=document_name, author_name=author_name))
             document_aux["Claude2.1"] = Max_Label
-
-
 
         document_aux.to_excel(fileOut, index=False)
         print(f"Completed book - {document_name}!")
