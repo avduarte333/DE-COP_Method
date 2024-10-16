@@ -1,5 +1,7 @@
 # DE-COP 👮
-This is the anonymized version of the code and data for the paper 'DE-COP: Detecting Copyrighted Content in Language Models Training Data' to be submitted to ICML 2024.<br>
+This is the official repository for the paper [DE-COP: Detecting Copyrighted Content in Language Models Training Data](https://arxiv.org/abs/2402.09910) by *André V. Duarte, Xuandong Zhao, Arlindo L. Oliveira and Lei Li* <br>
+
+[Paper](https://arxiv.org/abs/2402.09910) || [BookTection Benchmark](https://huggingface.co/datasets/avduarte333/BookTection) || [arXivTection Benchmark](https://huggingface.co/datasets/avduarte333/arXivTection) 
 
 
 DE-COP is a method for Detecting Copyrighted Content in the Language Models Training Data. It employs probing tasks structured as multiple-choice questions, whose options include both verbatim text and their paraphrases.
@@ -7,7 +9,7 @@ DE-COP is a method for Detecting Copyrighted Content in the Language Models Trai
 
 
 ---
-## DE-COP Example
+## DE-COP (Reproduce our results)
 ⚠ Important: Ensure to add the API key in 2_decop_blackbox.py and HF LLaMA-2 access token in 2_decop_hf.py<br>
 
 ---
@@ -44,7 +46,7 @@ python 3_get_results_blackbox.py --data arXivTection
 
 
 
-### 📚 arXivTection and BookTection Datasets
+### 📚 [arXivTection](https://huggingface.co/datasets/avduarte333/arXivTection) and [BookTection](https://huggingface.co/datasets/avduarte333/BookTection) Datasets
 The arXivTection and the BookTection datasets serve as benchmarks designed for the task of detecting pretraining data from Large Language models.
 
 The arXivTection consists of 50 research papers extracted from arXiv. 
@@ -77,4 +79,22 @@ The Multiple-Choice-Question-Answering task with our Dataset is designed to be a
 - Mixtral
 - ChatGPT (gpt-3.5-turbo-instruct)
 - GPT-3 (text-davinci-003)
-- Claude 
+- Claude
+
+### BookTection-128 Results
+The BookTection-128_Results directory contains the evaluation outcomes for all models tested with DE-COP and the Baselines on the BookTection Benchmark, specifically focusing on medium-length passages. These files offer a comprehensive overview of the results without the necessity for reproducing our experiments.
+
+## 💬 Citation
+
+If you find this work useful, please consider citing our paper:
+
+```bibtex
+@misc{duarte2024decop,
+      title={{DE-COP: Detecting Copyrighted Content in Language Models Training Data}}, 
+      author={André V. Duarte and Xuandong Zhao and Arlindo L. Oliveira and Lei Li},
+      year={2024},
+      eprint={2402.09910},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
